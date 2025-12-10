@@ -1,30 +1,33 @@
 #include <iostream>
-#include <string>
 #include <vector>
 using namespace std;
 
 int main()
 {
-    vector<string>v1;
-    v1.push_back("Sunday");
-    v1.push_back("Monday");
-    v1.push_back("Tuesday");
-    v1.push_back("Wednesday");
-    v1.push_back("Thursday");
-    v1.push_back("Friday");
-    v1.push_back("Saturday");
-
-    char p [100];
-    cin >> p;
-    if (p == v1[3])
+    int m,n,x;
+    cin >> m >> n >> x;
+    vector<int>first(m);
+    vector<int>scond(n);
+    for (int i = 0; i < m; i++)
     {
-        cout << "yes" <<endl;
+        cin >> first[i];
     }
-    else{
-        cout << "no" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> scond[i];
     }
-    
-
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (first[i] + scond[j] == x)
+            {
+                cout << i << " " << j << endl;
+            }
+            
+        }
+        
+    }
     
     
 }
